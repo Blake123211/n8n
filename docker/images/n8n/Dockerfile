@@ -1,5 +1,6 @@
 ARG NODE_VERSION=22
-EXPOSE 10000
+EXPOSE $PORT
+ENV N8N_PORT=$PORT
 # 1. Create an image to build n8n
 FROM --platform=linux/amd64 n8nio/base:${NODE_VERSION} AS builder
 
