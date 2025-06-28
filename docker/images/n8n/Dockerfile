@@ -1,6 +1,7 @@
 ARG NODE_VERSION=22
 EXPOSE $PORT
 ENV N8N_PORT=$PORT
+ENV WEBHOOK_TUNNEL_URL=https://n8n-latest-w6hs.onrender.com
 # 1. Create an image to build n8n
 FROM --platform=linux/amd64 n8nio/base:${NODE_VERSION} AS builder
 
